@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  padding: 50px;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/3c22de092089fa1fd93afdecd5dd0060.jpg");
+  background-size: cover;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+h1 span {
+  display: block;
+  color: #ccc;
+  font-size: 14px;
+  font-style: italic;
+  height: 14px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.note-form textarea {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid lightgrey;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100px;
+  padding: 10px;
+  outline: none;
+}
+.note-form button {
+  width: 100%;
+  background-color: #fff27f;
+  cursor: pointer;
+  padding: 10px;
+  border: 0;
+  outline: none;
+}
+.note-form button:hover {
+  background-color: tomato;
+  color: white;
+}
+.note {
+  position: absolute;
+  cursor: pointer;
+  background-image: url("./images/post-it-note.png");
+  background-size: cover;
+  top: 100px;
+  left: 300px;
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+}
+.note .text {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+}
+.note .close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 15px;
+  transition: transform 0.3s ease;
+}
+.note .close:hover {
+  transform: scale(1.6);
 }
