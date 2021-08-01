@@ -64,7 +64,7 @@ h1 span {
   height: 100%;
   width: 100%;
   white-space: pre-wrap;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .note .close {
   width: 15px;
